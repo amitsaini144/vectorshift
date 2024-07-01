@@ -12,8 +12,8 @@ export default function HeroSection() {
                     className="text-center"
                 >
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6">
-                        <div className=' flex flex-col gap-3'>
-                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-400">The No-Code</span>
+                        <div className='flex flex-col gap-3'>
+                            <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-300">The No-Code</span>
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-400 ">AI automations platform</span>
                         </div>
                     </h1>
@@ -36,7 +36,7 @@ export default function HeroSection() {
                             whileTap={{ scale: 0.95 }}
                         >
                             <Link href="https://calendly.com/albert_mao/vectorshift-intro-chat" target="_blank" rel="noopener"
-                                className="inline-block bg-transparent px-8 py-3 rounded-full text-blue-200 font-semibold hover:text-purple-400 transition duration-300"
+                                className="inline-block bg-transparent px-8 py-3 rounded-full text-white font-semibold hover:text-purple-400 transition duration-300"
                             >
                                 Talk to us
                             </Link>

@@ -20,7 +20,11 @@ export default function NavigationContainer() {
     };
 
     return (
-        <div className=" text-white px-2 md:px-10 lg:px-20 pt-12">
+        <motion.div className=" text-white px-2 md:px-10 lg:px-20 pt-12"
+            initial={{ opacity: 0, y: "-100vh" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+        >
             <nav className="flex items-center min-[810px]:justify-between justify-center  p-4">
                 <Link href="/" className="flex items-center mr-10 ">
                     <div className="w-6 h-6 mr-2">
@@ -79,14 +83,14 @@ export default function NavigationContainer() {
                             Log in
                         </Link>
                         <motion.div
-                        initial={{ y: 0}}
-                        whileHover={{ y: -3}}
-                        whileTap={{ y: 0}}
+                            initial={{ y: 0 }}
+                            whileHover={{ y: -3 }}
+                            whileTap={{ y: 0 }}
                         >
                             <Link href="https://app.vectorshift.ai/api/signup"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-[#7b70e0] to-[#2181f0] text-white font-bold"
+                                className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#7b70e0] to-[#2181f0] text-white font-bold"
                             >
                                 Get started</Link>
                         </motion.div>
@@ -95,6 +99,6 @@ export default function NavigationContainer() {
                     </div>
                 </div>
             </nav>
-        </div>
+        </motion.div>
     );
 }
