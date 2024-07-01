@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
     return (
-        <section className=" text-white py-20 font-sans">
+        <section className=" text-white py-20 font-sans z-1">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -17,7 +17,7 @@ export default function HeroSection() {
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-blue-400 ">AI automations platform</span>
                         </div>
                     </h1>
-                    <p className="text-blue-200 md:text-xl mb-12 max-w-3xl mx-auto font-medium ">
+                    <p className="text-blue-100 md:text-xl mb-12 max-w-3xl mx-auto font-medium z-1">
                         An integrated framework of no-code, low-code, and out of the box generative AI solutions to build AI search engines, assistants, chatbots, and automations.
                     </p>
                     <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
