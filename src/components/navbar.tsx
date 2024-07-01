@@ -1,11 +1,28 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import PlatformDropdown, { MoreDropdown } from './dropdown';
 
 export default function NavigationContainer() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
+
+    const togglePlatformDropdown = () => {
+        setIsOpen(!isOpen);
+        if (isOpen2) setIsOpen2(false);
+    };
+
+    const toggleMoreDropdown = () => {
+        setIsOpen2(!isOpen2);
+        if (isOpen) setIsOpen(false);
+    };
+
     return (
-        <div className="hidden md:block">
-            <nav className="flex items-center justify-between p-4 bg-[#your-background-color]">
-                <Link href="/" className="flex items-center">
+        <div className=" text-white px-2 md:px-10 lg:px-20 pt-12">
+            <nav className="flex items-center min-[810px]:justify-between justify-center  p-4">
+                <Link href="/" className="flex items-center mr-10 ">
                     <div className="w-6 h-6 mr-2">
                         <Image
                             src="https://framerusercontent.com/images/PUVFaa9JKxr86MtwPIPVKLjAY.png"
@@ -15,43 +32,67 @@ export default function NavigationContainer() {
                             height={40}
                         />
                     </div>
-                    <span className="text-lg font-bold">VectorShift</span>
+                    <span className='text-sm'>VectorShift</span>
                 </Link>
-                <div className="flex items-center space-x-4">
-                    <div className="relative group">
-                        <button className="flex items-center text-[#your-text-color] hover:text-[#hover-color]">
-                            <span className="font-bold">Platform</span>
-                            <svg className="w-4 h-4 ml-1" />
-                        </button>
-                        {/* Add dropdown menu here if needed */}
+                <div className='hidden min-[810px]:block'>
+                    <div className="flex items-center space-x-4">
+                        <div className="relative group">
+                            <button className="flex items-center hover:text-purple-400 text-sm" onClick={togglePlatformDropdown}>
+                                <span>Platform</span>
+                                {isOpen ? <RiArrowDropUpLine className='text-2xl' /> : <RiArrowDropDownLine className='text-2xl' />}
+                            </button>
+                            {isOpen ? <PlatformDropdown /> : null}
+                        </div>
+
+                        <Link href="/enterprise" className=" hover:text-purple-400 px-1 text-sm">
+                            Enterprise
+                        </Link>
+
+                        <Link href="/pricing" className=" hover:text-purple-400 px-1 text-sm">
+                            Pricing
+                        </Link>
+
+                        <Link href="/tutorials" className="hidden xl:block hover:text-purple-400 px-1 text-sm">
+                            Tutorials
+                        </Link>
+
+                        <Link href="/docs" className="hidden xl:block hover:text-purple-400 px-1 text-sm">
+                            Docs
+                        </Link>
+
+                        <Link href="/blog" className="hidden xl:block hover:text-purple-400 px-1 text-sm">
+                            Blog
+                        </Link>
+
+                        <Link href="/discord" className="hidden xl:block hover:text-purple-400 px-1 text-sm">
+                            Discord
+                        </Link>
+                        <div className="relative group xl:hidden">
+                            <button className="flex items-center hover:text-purple-400 text-sm" onClick={toggleMoreDropdown}>
+                                <span >More</span>
+                                {isOpen2 ? <RiArrowDropUpLine className='text-2xl' /> : <RiArrowDropDownLine className='text-2xl' />}
+                            </button>
+                            {isOpen2 ? <MoreDropdown /> : null}
+                        </div>
+
+                        <Link href="https://app.vectorshift.ai" target="_blank" rel="noopener noreferrer" className=" hover:text-purple-400 px-1 text-sm">
+                            Log in
+                        </Link>
+                        <motion.div
+                        initial={{ y: 0}}
+                        whileHover={{ y: -3}}
+                        whileTap={{ y: 0}}
+                        >
+                            <Link href="https://app.vectorshift.ai/api/signup"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-[#7b70e0] to-[#2181f0] text-white font-bold"
+                            >
+                                Get started</Link>
+                        </motion.div>
+
+
                     </div>
-
-                    <div className="relative group">
-                        <button className="flex items-center text-[#your-text-color] hover:text-[#hover-color]">
-                            <span className="font-bold">More</span>
-                            <svg className="w-4 h-4 ml-1" />
-                        </button>
-                        {/* Add dropdown menu here if needed */}
-                    </div>
-
-                    <Link href="/enterprise" className="text-[#your-text-color] hover:text-[#hover-color] font-bold">
-                        Enterprise
-                    </Link>
-
-                    <Link href="/pricing" className="text-[#your-text-color] hover:text-[#hover-color] font-bold">
-                        Pricing
-                    </Link>
-
-                    <a href="https://app.vectorshift.ai" target="_blank" rel="noopener noreferrer" className="text-[#your-text-color] hover:text-[#hover-color] font-bold">
-                        Log in
-                    </a>
-                    <Link href="https://app.vectorshift.ai/api/signup"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-[#0767AB] to-[#2B075A] text-white font-bold hover:shadow-lg transition-shadow duration-300"
-                    >
-                        Get started</Link>
-
                 </div>
             </nav>
         </div>
