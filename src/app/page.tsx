@@ -1,8 +1,8 @@
 "use client";
 
 import NavigationContainer from "@/components/navbar";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import HeroSection from "@/components/herosection";
 
 export default function Home() {
   return (
@@ -14,6 +14,9 @@ export default function Home() {
       >
         <NavigationContainer />
       </motion.div>
+      <div>
+        <HeroSection />
+      </div>
 
     </div>
   );
