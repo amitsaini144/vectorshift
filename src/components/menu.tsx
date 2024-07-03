@@ -11,9 +11,10 @@ export default function Menu() {
     };
     return (
         <>
-            <button
+            <motion.button
+                whileHover={{ scale: 1.15 }}
                 onClick={toggle}
-                className="fixed bottom-8 right-8 z-50 p-4 rounded-full md:hidden transition-all duration-300 ease-outbg-gradient-to-b from-purple-900/90 to-purple-900/10 backdrop-blur-sm hover:from-purple-900/40 hover:to-purple-900/40"
+                className="fixed bottom-8 right-8 z-50 p-4 rounded-full md:hidden transition-all duration-300 ease-out bg-gradient-to-b from-purple-900/90 to-purple-900/10 backdrop-blur-sm"
             >
                 <div className="relative w-6 h-6">
                     <span
@@ -25,7 +26,7 @@ export default function Menu() {
                             }`}
                     ></span>
                 </div>
-            </button>
+            </motion.button>
 
             <AnimatePresence>
                 {isOpen && (

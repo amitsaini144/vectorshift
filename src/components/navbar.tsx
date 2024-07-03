@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import PlatformDropdown, { MoreDropdown } from './dropdown';
 
@@ -45,14 +45,16 @@ export default function NavigationContainer() {
                                 <span>Platform</span>
                                 {isOpen ? <RiArrowDropUpLine className='text-2xl' /> : <RiArrowDropDownLine className='text-2xl' />}
                             </button>
-                            {isOpen ? <PlatformDropdown /> : null}
+                            <AnimatePresence>
+                                {isOpen && <PlatformDropdown />}
+                            </AnimatePresence>
                         </div>
 
-                        <Link href="/enterprise" className=" hover:text-purple-400 px-1 text-sm">
+                        <Link href="/enterprise" className="hover:text-purple-400 px-1 text-sm">
                             Enterprise
                         </Link>
 
-                        <Link href="/pricing" className=" hover:text-purple-400 px-1 text-sm">
+                        <Link href="/pricing" className="hover:text-purple-400 px-1 text-sm">
                             Pricing
                         </Link>
 
@@ -76,7 +78,9 @@ export default function NavigationContainer() {
                                 <span >More</span>
                                 {isOpen2 ? <RiArrowDropUpLine className='text-2xl' /> : <RiArrowDropDownLine className='text-2xl' />}
                             </button>
-                            {isOpen2 ? <MoreDropdown /> : null}
+                            <AnimatePresence>
+                                {isOpen2 && <MoreDropdown />}
+                            </AnimatePresence>
                         </div>
 
                         <Link href="https://app.vectorshift.ai" target="_blank" rel="noopener noreferrer" className=" hover:text-purple-400 px-1 text-sm">
