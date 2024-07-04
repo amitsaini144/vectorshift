@@ -21,9 +21,9 @@ export default function NavigationContainer() {
 
     return (
         <motion.div className=" text-white px-2 md:px-10 lg:px-20 pt-12"
-            initial={{ opacity: 0, y: "-100vh" }}
+            initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8 }}
         >
             <nav className="flex items-center min-[810px]:justify-between justify-center  p-4">
                 <Link href="/" className="flex items-center mr-10 ">
