@@ -27,9 +27,9 @@ const LanguageModelsSection = () => {
             initial={{ opacity: 0, y: 100 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full max-w-6xl mx-auto px-2 py-12 text-center"
+            className="w-full max-w-6xl mx-auto px-2 pt-12 pb-40 text-center"
         >
-            <h4 className="text-4xl font-bold mb-4 bg-gradient-to-t from-purple-400 to-white bg-clip-text text-transparent">
+            <h4 className="text-3xl font-bold mb-4 bg-gradient-to-t from-purple-400 to-white bg-clip-text text-transparent">
                 Large language models
             </h4>
             <p className="text-purple-200 mb-8">
