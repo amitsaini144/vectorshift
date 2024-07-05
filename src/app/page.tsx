@@ -7,6 +7,7 @@ import Menu from "@/components/menu";
 import Heading from "@/components/heading";
 import LanguageModelsSection from "@/components/languageModelSection";
 import IntegrateSection from "@/components/integrateSection";
+import HeadingTwo from "@/components/headingTwo";
 
 export default function Home() {
 
@@ -26,6 +27,9 @@ export default function Home() {
       </div>
       <div>
         <LanguageModelsSection />
+      </div>
+      <div>
+        <HeadingTwo />
       </div>
       <Menu />
     </div>

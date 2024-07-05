@@ -6,7 +6,7 @@ export default function HeroSection() {
         <section className=" text-white py-20 font-sans z-1">
             <div className="container mx-auto px-4">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     className="text-center"

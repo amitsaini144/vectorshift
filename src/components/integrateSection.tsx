@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import drive from "../../public/images/googleDrive.png";
+import ImageItem from "@/components/imageItems";
 
 interface ModelInfo {
     name: string;
@@ -36,26 +36,42 @@ const IntegrateSection = () => {
                 Live-sync, set up action based triggers (e.g., receive an email), and automate actions (e.g., send a slack message) across your tool stack
             </p>
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-y-9">
-                {models.map((model, index) => (
-                    <motion.div
-                        key={model.name}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex flex-col items-center"
-                    >
-                        <div className="h-16 mb-4 relative">
-                            <Image
-                                src={model.logoSrc}
-                                alt={`${model.name} logo`}
-                                objectFit="contain"
-                                width={90}
-                                height={100}
-                            />
-                        </div>
-                        <h6 className="text-white font-semibold ">{model.name}</h6>
-                    </motion.div>
-                ))}
+                <ImageItem
+                    name={models[0].name}
+                    logoSrc={models[0].logoSrc}
+                    width={90}
+                    height={90}
+                />
+                <ImageItem
+                    name={models[1].name}
+                    logoSrc={models[1].logoSrc}
+                    width={90}
+                    height={90}
+                />
+                <ImageItem
+                    name={models[2].name}
+                    logoSrc={models[2].logoSrc}
+                    width={70}
+                    height={70}
+                />
+                <ImageItem
+                    name={models[3].name}
+                    logoSrc={models[3].logoSrc}
+                    width={85}
+                    height={85}
+                />
+                <ImageItem
+                    name={models[4].name}
+                    logoSrc={models[4].logoSrc}
+                    width={65}
+                    height={65}
+                />
+                <ImageItem
+                    name={models[5].name}
+                    logoSrc={models[5].logoSrc}
+                    width={110}
+                    height={110}
+                />
             </div>
         </motion.div>
     );
