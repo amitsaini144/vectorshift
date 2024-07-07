@@ -1,13 +1,13 @@
 "use client";
 
 import NavigationContainer from "@/components/navbar";
-import { motion } from "framer-motion";
 import HeroSection from "@/components/herosection";
 import Menu from "@/components/menu";
 import Heading from "@/components/heading";
 import LanguageModelsSection from "@/components/languageModelSection";
 import IntegrateSection from "@/components/integrateSection";
 import HeadingTwo from "@/components/headingTwo";
+import FAQ from "@/components/faqSection";
 
 export default function Home() {
 
@@ -30,6 +30,9 @@ export default function Home() {
       </div>
       <div>
         <HeadingTwo />
+      </div>
+      <div>
+        <FAQ />
       </div>
       <Menu />
     </div>
