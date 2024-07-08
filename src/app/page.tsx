@@ -7,33 +7,19 @@ import Heading from "@/components/heading";
 import LanguageModelsSection from "@/components/languageModelSection";
 import IntegrateSection from "@/components/integrateSection";
 import HeadingTwo from "@/components/headingTwo";
-import FAQ from "@/components/faqSection";
+import FAQ from "@/components/FAQ/faqSection";
 
 export default function Home() {
 
   return (
-    <div className="bg-black min-h-screen lg:px-10 md:px-1">
-      <div>
-        <NavigationContainer />
-      </div>
-      <div>
-        <HeroSection />
-      </div>
-      <div>
-        <Heading />
-      </div>
-      <div>
-        <IntegrateSection />
-      </div>
-      <div>
-        <LanguageModelsSection />
-      </div>
-      <div>
-        <HeadingTwo />
-      </div>
-      <div>
-        <FAQ />
-      </div>
+    <div className="flex flex-col items-center bg-black min-h-screen w-full lg:px-10 md:px-1 px-6">
+      <NavigationContainer />
+      <HeroSection />
+      <Heading />
+      <IntegrateSection />
+      <LanguageModelsSection />
+      <HeadingTwo />
+      <FAQ />
       <Menu />
     </div>
   );
