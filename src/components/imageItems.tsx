@@ -22,7 +22,6 @@ export default function ImageItem({ name, logoSrc, width, height }: ImageItem) {
                     alt={`${name} logo`}
                     width={width}
                     height={height}
-                    objectFit="contain"
                 />
             </div>
             <h6 className="text-white font-semibold">{name}</h6>

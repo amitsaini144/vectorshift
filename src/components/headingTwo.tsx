@@ -11,7 +11,7 @@ export default function HeadingTwo() {
             initial={{ opacity: 0, y: 100 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center text-3xl md:text-4xl font-semibold pb-10 bg-clip-text text-transparent bg-gradient-to-b from-white to-purple-300"
+            className="text-center text-3xl md:text-4xl font-semibold pb-28 bg-clip-text text-transparent bg-gradient-to-b from-white to-purple-300"
         >
             Leverage AI throughout your <br /> company and products
         </motion.div>
