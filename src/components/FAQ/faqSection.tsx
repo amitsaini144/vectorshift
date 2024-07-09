@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 
 const FAQ = () => {
     const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.3 });
+    const isInView = useInView(ref, { once: true, amount: 0.2 });
     const [openItems, setOpenItems] = useState<boolean[]>(new Array(faqData.length).fill(false));
 
     const toggleFAQ = (index: number) => {

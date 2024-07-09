@@ -14,7 +14,7 @@ export default function Menu() {
             <motion.button
                 whileHover={{ scale: 1.15 }}
                 onClick={toggle}
-                className="fixed bottom-8 right-8 z-50 p-4 rounded-full md:hidden transition-all duration-300 ease-out bg-gradient-to-b from-purple-900/90 to-purple-900/10 backdrop-blur-sm"
+                className="fixed bottom-8 right-8 z-50 p-4 rounded-full md:hidden transition-all duration-300 ease-out bg-gradient-to-b from-purple-900/90 to-purple-900/10 backdrop-blur-lg"
             >
                 <div className="relative w-6 h-6">
                     <span
