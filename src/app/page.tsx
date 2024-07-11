@@ -13,7 +13,7 @@ import DocsCard from "@/components/docsCard";
 export default function Home() {
 
   return (
-    <div className="flex flex-col items-center bg-black min-h-screen w-full lg:px-10 md:px-1 px-6">
+    <div className="flex flex-col items-center bg-black min-h-screen w-full md:px-10 px-6">
       <NavigationContainer />
       <HeroSection />
       <Heading />
