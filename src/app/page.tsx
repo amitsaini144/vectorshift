@@ -9,7 +9,7 @@ import IntegrateSection from "@/components/integrateSection";
 import HeadingTwo from "@/components/headingTwo";
 import FAQ from "@/components/FAQ/faqSection";
 import DocsCard from "@/components/docsCard";
-import HowItWorks from "@/components/HowItWorks/howItWorks";
+import CardLayout from "@/components/Cards/cardLayout";
 
 export default function Home() {
 
@@ -21,7 +21,7 @@ export default function Home() {
       <IntegrateSection />
       <LanguageModelsSection />
       <HeadingTwo />
-      <HowItWorks />
+      <CardLayout />
       <DocsCard />
       <FAQ />
       <Menu />

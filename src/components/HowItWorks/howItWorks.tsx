@@ -20,7 +20,9 @@ export default function HowItWorks() {
                     </span>
                 </h2>
             </div>
-            <HowItWorksCarousel />
+            <div >
+                <HowItWorksCarousel />
+            </div>
             
         </motion.div>
     )

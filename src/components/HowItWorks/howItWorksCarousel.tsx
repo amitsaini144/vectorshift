@@ -29,7 +29,7 @@ const Card = ({ number, title, description }: CardProps) => {
                         {title}
                     </h2>
                 </div>
-                <p className="text-white flex-grow">{description}</p>
+                <p className="text-white flex-grow leading-relaxed">{description}</p>
             </div>
         </motion.div>
     );
@@ -69,21 +69,26 @@ const HowItWorksCarousel = () => {
     };
 
     return (
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-fit overflow-hidden">
             <div className="flex transition-transform duration-300 ease-in-out gap-8" style={{ transform: `translateX(-${currentIndex * 25}%)` }}>
                 {cards.map((card, index) => (
-                    <div key={index} className="w-[290px] flex-shrink-0 h-[320px]">
+                    <div key={index} className="flex-shrink-0 h-[320px] w-[290px]">
                         <Card {...card} />
                     </div>
                 ))}
             </div>
-            <button onClick={prevCard} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 rounded-full text-white">
-            <MdOutlineKeyboardArrowLeft />
-            </button>
-            <button onClick={nextCard} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 rounded-full text-white">
-            <MdOutlineKeyboardArrowRight />
-            </button>
+            {currentIndex > 0 && (
+                <button onClick={prevCard} className="absolute left-0 top-1/2 text-white z-10">
+                    <MdOutlineKeyboardArrowLeft />
+                </button>
+            )}
+            {currentIndex < cards.length - 1 && (
+                <button onClick={nextCard} className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white z-10">
+                    <MdOutlineKeyboardArrowRight />
+                </button>
+            )}
         </div>
+
     );
 };
 
