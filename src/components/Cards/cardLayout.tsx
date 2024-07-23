@@ -7,13 +7,29 @@ import Knowledge from "./knowledge";
 
 export default function CardLayout() {
     return (
-        <div className="grid grid-cols-1 gap-5 overflow-auto sm:grid-cols-2 xl:grid-cols-3 py-10">
-            <EnterpriseSolutions  />
-            <HighVolume />
-            <RFP />
-            <Report />
-            <Personalized />
-            <Knowledge />
+        <div>
+            <div className="flex gap-5 overflow-auto flex-wrap justify-center">
+                <div className="">
+                    <EnterpriseSolutions />
+                </div>
+                <div className="h-80">
+                    <HighVolume />
+                </div>
+                <div className="">
+                    <RFP />
+                </div>
+                <div className="h-80">
+                    <Report />
+                </div>
+                <div className="">
+                    <Personalized />
+                </div>
+                <div className="">
+                    <Knowledge />
+                </div>
+            </div>
+
         </div>
+
     )
 }
