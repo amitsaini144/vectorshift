@@ -14,17 +14,22 @@ import CardLayout from "@/components/Cards/cardLayout";
 export default function Home() {
 
   return (
-    <div className="flex flex-col items-center bg-black min-h-screen w-full md:px-10 px-6">
-      <NavigationContainer />
-      <HeroSection />
-      <Heading />
-      <IntegrateSection />
-      <LanguageModelsSection />
-      <HeadingTwo />
-      <CardLayout />
-      <DocsCard />
-      <FAQ />
-      <Menu />
+    <div className="flex flex-col items-center bg-black min-h-screen w-full">
+      <div className="bg-gradient-to-br from-[#5500dc] via-[#000000] to-[#000000] w-full md:px-10 px-6">
+        <NavigationContainer />
+        <HeroSection />
+        <Heading />
+      </div>
+      <div className="md:px-10 px-6">
+        <IntegrateSection />
+        <LanguageModelsSection />
+        <HeadingTwo />
+        <CardLayout />
+        <DocsCard />
+        <FAQ />
+        <Menu />
+      </div>
+
     </div>
   );
 }

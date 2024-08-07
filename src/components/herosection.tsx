@@ -38,7 +38,7 @@ export default function HeroSection() {
                             <Link href="https://calendly.com/albert_mao/vectorshift-intro-chat" target="_blank" rel="noopener"
                                 className="inline-block bg-transparent px-8 py-3 rounded-full text-white font-semibold hover:text-purple-400 transition duration-300"
                             >
-                                Talk to us
+                                Book a demo
                             </Link>
                         </motion.div>
                     </div>

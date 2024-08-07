@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-black text-purple-100 py-12 px-4 md:px-8 relative overflow-hidden pt-28">
+        <footer className="bg-gradient-to-tl from-[#5500dc] via-[#000000] to-[#000000] text-purple-100 py-12 px-4 md:px-8 relative overflow-hidden pt-28">
             <div className="max-w-6xl mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row gap-x-24 items-start mb-8 ">
                     <div className="flex flex-col space-y-6 mb-5">
