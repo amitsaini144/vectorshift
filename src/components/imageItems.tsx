@@ -10,21 +10,17 @@ interface ImageItem {
 
 export default function ImageItem({ name, logoSrc, width, height }: ImageItem) {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="flex flex-col items-center"
-        >
-            <div className="h-20 relative flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-40 h-40">
+            <div className="h-20 flex items-center justify-center">
                 <Image
                     src={logoSrc}
-                    alt={`${name} logo`}
+                    alt={name}
                     width={width}
                     height={height}
+                    style={{ objectFit: 'contain', maxWidth: '100%', maxHeight: '100%' }}
                 />
             </div>
-            <h6 className="text-white font-semibold">{name}</h6>
-        </motion.div>
+            <p className="text-white font-semibold">{name}</p>
+        </div>
     );
 };

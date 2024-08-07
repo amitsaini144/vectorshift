@@ -38,10 +38,10 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="mt-12 flex justify-center">
-                <svg className="w-48 h-auto" viewBox="0 0 965 144" fill="currentColor">
+                <svg className="w-96 h-auto" viewBox="0 0 965 144" fill="currentColor">
                     {/* Replace with actual SVG path data for the VectorShift logo */}
                     <path d="M0 0h965v144H0z" fillOpacity="0" />
-                    <text x="482.5" y="72" fontSize="72" textAnchor="middle" dominantBaseline="middle">VectorShift</text>
+                    <text x="600" y="72" fontSize="140" textAnchor="middle" dominantBaseline="middle">VectorShift</text>
                 </svg>
             </div>
         </footer>
