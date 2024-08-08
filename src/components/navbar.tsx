@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import PlatformDropdown, { MoreDropdown } from './dropdown';
 
