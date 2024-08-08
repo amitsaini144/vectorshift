@@ -18,7 +18,7 @@ export default function CardLayout() {
             initial={{ opacity: 0, y: 100 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="pb-10 max-w-[430px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-7xl mx-auto pt-12"
+            className="pb-10 max-w-[410px] sm:max-w-[550px] md:max-w-[650px] lg:max-w-7xl mx-auto pt-12"
         >
             <div className="hidden lg:flex lg:gap-5 lg:flex-wrap lg:justify-center">
                 <div><EnterpriseSolutions /></div>
@@ -30,7 +30,7 @@ export default function CardLayout() {
             </div>
 
             <div className="lg:hidden relative">
-                <div className="flex gap-5 overflow-x-auto scroll-smooth scrollbar-hide">
+                <div className="flex gap-5 overflow-x-auto scrollbar-hide">
                     <div className="flex-shrink-0"><EnterpriseSolutions /></div>
                     <div className="flex-shrink-0"><HighVolume /></div>
                     <div className="flex-shrink-0"><RFP /></div>

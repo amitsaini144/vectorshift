@@ -20,7 +20,7 @@ export default function Home() {
         <HeroSection />
         <Heading />
       </div>
-      <div className="md:px-10 px-6">
+      <div className="md:px-10 px-6 overflow-x-hidden">
         <IntegrateSection />
         <LanguageModelsSection />
         <HeadingTwo />
@@ -29,7 +29,6 @@ export default function Home() {
         <FAQ />
         <Menu />
       </div>
-
     </div>
   );
 }
