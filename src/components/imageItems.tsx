@@ -10,7 +10,7 @@ interface ImageItem {
 
 export default function ImageItem({ name, logoSrc, width, height }: ImageItem) {
     return (
-        <div className="flex flex-col items-center justify-center w-40 h-40">
+        <div className="flex flex-col items-center justify-center w-40 h-40 ">
             <div className="h-20 flex items-center justify-center">
                 <Image
                     src={logoSrc}
