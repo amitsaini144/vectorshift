@@ -1,9 +1,4 @@
-// data/faqData.ts
-
-export interface FAQData {
-    question: string;
-    answer: string | React.ReactNode;
-}
+import { FAQData } from '@/types';
 
 export const faqData: FAQData[] = [
     {

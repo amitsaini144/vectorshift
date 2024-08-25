@@ -1,14 +1,7 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
-import Image from 'next/image';
 import ImageItem from "@/components/imageItems";
-
-interface ModelInfo {
-    name: string;
-    logoSrc: string;
-    width: number;
-    height: number;
-}
+import { ModelInfo } from '@/types';
 
 const models: ModelInfo[] = [
     { name: 'Google Drive', logoSrc: '/images/googleDrive.png', width: 90, height: 90 },

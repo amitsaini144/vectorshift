@@ -1,12 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { MdArrowOutward, MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
-
-interface CardProps {
-    number: string;
-    title: string;
-    description: string;
-}
+import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import { CardProps } from '@/types';
 
 const Card = ({ number, title, description }: CardProps) => {
     const ref = useRef(null);

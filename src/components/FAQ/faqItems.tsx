@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { FAQData as FAQItemType } from './faqData';
+import { FAQData } from '@/types';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface FAQItemProps {
-  item: FAQItemType;
+  item: FAQData;
   isOpen: boolean;
   onToggle: () => void;
 }

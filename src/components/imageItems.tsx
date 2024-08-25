@@ -1,14 +1,7 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
+import { ImageProps } from "@/types";
 
-interface ImageItem {
-    name: string;
-    logoSrc: string;
-    width: number;
-    height: number;
-}
-
-export default function ImageItem({ name, logoSrc, width, height }: ImageItem) {
+export default function ImageItem({ name, logoSrc, width, height }: ImageProps) {
     return (
         <div className="flex flex-col items-center justify-center w-40 h-40 ">
             <div className="h-20 flex items-center justify-center">
