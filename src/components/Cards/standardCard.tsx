@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { cardInfo } from '@/types';
 
-export default function HighVolume({ title, description, link }: cardInfo) {
+export default function StandardCard({ title, description, link }: cardInfo) {
     return (
         <Link href={link}>
             <div className='rounded-2xl p-10 bg-gradient-to-b from-[#100923] via-[#10052b] to-[#130436] border border-[#430B8A] text-white w-80 h-full'>

@@ -9,6 +9,12 @@ export interface FAQData {
     answer: string | React.ReactNode;
 }
 
+export interface FAQItemProps {
+    item: FAQData;
+    isOpen: boolean;
+    onToggle: () => void;
+}
+
 export interface CardProps {
     number: string;
     title: string;

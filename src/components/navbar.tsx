@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { RiArrowDropDownLine, RiArrowDropUpLine } from "react-icons/ri";
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import PlatformDropdown, { MoreDropdown } from './dropdown';
+import MoreDropdown from '@/components/dropdown/moreDropdown';
+import PlatformDropdown from '@/components/dropdown/platformDropdown';
 
 export default function NavigationContainer() {
     const [isOpen, setIsOpen] = useState(false);

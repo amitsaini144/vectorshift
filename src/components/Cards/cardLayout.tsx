@@ -1,20 +1,12 @@
 import EnterpriseSolutions from "./enterprise";
-import HighVolume from "./highVolume";
+import StandardCard from "./standardCard";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { cardInfo } from "@/types";
+import { cards } from "@/data/cardData";
 
 export default function CardLayout() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-    const cardInfo: cardInfo[] = [
-        { title: "High volume chatbot", description: "We leverage our secure infrastructure and development.", link: "/" },
-        { title: "RFP and proposal generators", description: "We leverage our secure infrastructure and development platform to build and deploy high-ROI AI solutions for your organizations.", link: "/" },
-        { title: "Report generation", description: "We leverage our secure infrastructure and development.", link: "/" },
-        { title: "Personalized email outbound", description: "We leverage our secure infrastructure and development platform to build and deploy high-ROI AI solutions for your organizations.", link: "/" },
-        { title: "Knowledge search", description: "We leverage our secure infrastructure and development platform to build and deploy high-ROI AI solutions for your organizations.", link: "/" },
-    ]
 
     return (
         <motion.div
@@ -26,9 +18,12 @@ export default function CardLayout() {
         >
             <div className="hidden lg:flex lg:gap-5 lg:flex-wrap lg:justify-center">
                 <div><EnterpriseSolutions /></div>
-                {cardInfo.map((item, index) => (
+                {cards.map((item, index) => (
                     <div key={index}>
-                        <HighVolume title={item.title} description={item.description} link={item.link} />
+                        <StandardCard
+                            title={item.title}
+                            description={item.description}
+                            link={item.link} />
                     </div>
                 ))}
             </div>
@@ -36,9 +31,12 @@ export default function CardLayout() {
             <div className="lg:hidden relative">
                 <div className="flex gap-5 overflow-x-auto scrollbar-hide">
                     <div className="flex-shrink-0"><EnterpriseSolutions /></div>
-                    {cardInfo.map((item, index) => (
+                    {cards.map((item, index) => (
                         <div className="flex-shrink-0" key={index}>
-                            <HighVolume title={item.title} description={item.description} link={item.link} />
+                            <StandardCard
+                                title={item.title}
+                                description={item.description}
+                                link={item.link} />
                         </div>
                     ))}
                 </div>

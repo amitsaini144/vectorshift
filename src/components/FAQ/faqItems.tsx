@@ -1,14 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { FAQData } from '@/types';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FAQItemProps } from '@/types';
 
-interface FAQItemProps {
-  item: FAQData;
-  isOpen: boolean;
-  onToggle: () => void;
-}
-
-export const FAQItem: React.FC<FAQItemProps> = ({ item, isOpen, onToggle }) => {
+export default function FAQItem({ item, isOpen, onToggle }: FAQItemProps) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

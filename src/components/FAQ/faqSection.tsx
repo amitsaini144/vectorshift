@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { faqData } from "./faqData";
-import { FAQItem } from './faqItems';
+import { faqData } from "@/data/faqData";
+import FAQItem from './faqItems';
 import { motion, useInView } from 'framer-motion';
 
-const FAQ = () => {
+export default function FAQ() {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.2 });
     const [openItems, setOpenItems] = useState<boolean[]>(new Array(faqData.length).fill(false));
@@ -43,5 +43,3 @@ const FAQ = () => {
         </motion.div>
     );
 };
-
-export default FAQ;

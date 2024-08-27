@@ -1,17 +1,7 @@
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import ImageItem from "@/components/imageItems";
-import { ModelInfo } from '@/types';
-
-const models: ModelInfo[] = [
-    { name: 'OpenAI', logoSrc: '/images/openai.png', width: 70, height: 100 },
-    { name: 'Anthropic', logoSrc: '/images/anthropic.png', width: 150, height: 100 },
-    { name: 'Huggingface', logoSrc: '/images/huggingface.png', width: 65, height: 100 },
-    { name: 'Google', logoSrc: '/images/google600.png', width: 60, height: 100 },
-    { name: 'LLAMA', logoSrc: '/images/llama.png', width: 180, height: 100 },
-    { name: 'AWS', logoSrc: '/images/aws.png', width: 170, height: 100 },
-    { name: 'Mistral AI_', logoSrc: '/images/mistralAI.png', width: 170, height: 100 },
-];
+import { languageModels } from '@/data/logoData';
 
 const LanguageModelsSection = () => {
     const ref = React.useRef(null);
@@ -33,7 +23,7 @@ const LanguageModelsSection = () => {
                     Access the latest models through the VectorShift platform
                 </p>
                 <div className="flex flex-wrap justify-center gap-x-8">
-                    {models.map((model, index) => (
+                    {languageModels.map((model, index) => (
                         <ImageItem
                             key={index}
                             name={model.name}
