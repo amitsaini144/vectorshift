@@ -21,8 +21,8 @@ export default function NavigationContainer() {
     };
 
     return (
-        <div className=" text-white px-2 md:px-10 lg:px-20 pt-12">
-            <nav className="flex items-center min-[810px]:justify-between justify-center  p-4">
+        <div className="text-white px-2 md:px-10 lg:px-20 pt-12 max-w-7xl mx-auto">
+            <nav className="flex items-center min-[810px]:justify-between p-4">
                 <Link href="/" className="flex items-center mr-10 ">
                     <div className="w-6 h-6 mr-2">
                         <Image

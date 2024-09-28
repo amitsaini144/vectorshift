@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
 
-            <div className="mt-12 flex justify-end">
+            <div className="mt-12 flex justify-end max-w-5xl mx-auto">
                 <svg className="w-full h-auto" viewBox="0 0 965 114" fill="currentColor">
                     <path d="M0 0h965v144H0z" fillOpacity="0" />
                     <text x="600" y="72" fontSize="140" textAnchor="middle" dominantBaseline="middle">VectorShift</text>
